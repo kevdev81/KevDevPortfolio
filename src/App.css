@@ -1,0 +1,346 @@
+@import url(https://fonts.googleapis.com/css?family=Nanum+Gothic|PT+Sans+Narrow|Raleway&display=swap);
+.btn-container {
+  position: absolute;
+  z-index: 3;
+  right: 35px;
+  top: 35px;
+  cursor: pointer;
+  transition: all 0.4s ease-out; }
+  .btn-container .btn-bars {
+    width: 28px;
+    margin: 0 0 5px 0;
+    color: #fff;
+    transition: all 0.4s ease-out; }
+  .btn-container .true {
+    transform: rotate(180deg); }
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 0.97;
+  visibility: hidden; }
+  .navbar.true {
+    visibility: visible; }
+  .navbar-profile, .navbar-nav {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden; }
+  .navbar-nav {
+    margin: 0;
+    padding: 0;
+    float: left;
+    list-style: none;
+    background: #444;
+    opacity: 1;
+    transform: translate3d(0, -100%, 0);
+    transition: all 0.4s ease-out; }
+    .navbar-nav.true {
+      transform: translate3d(0, 0, 0); }
+  .navbar-profile {
+    background: #303030;
+    transform: translate3d(0, 100%, 0);
+    transition: all 0.4s ease-out; }
+    .navbar-profile.true {
+      transform: translate3d(0, 0, 0); }
+    .navbar-profile .portrait {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      border: solid 1px #35b5ff;
+      background: url(./image/kevin.jpg);
+      background-size: cover; }
+  .navbar .nav-item {
+    transform: translate3d(600px, 0, 0);
+    transition: all 0.4s ease-out; }
+    .navbar .nav-item.true {
+      transform: translate3d(0, 0, 0); }
+    .navbar .nav-item a.active {
+      color: #35b5ff; }
+  .navbar .nav-link {
+    display: inline-block;
+    position: relative;
+    font-size: 30px;
+    text-transform: uppercase;
+    padding: 1rem 0;
+    font-weight: #fff;
+    text-decoration: none;
+    transition: all 0.4s ease-out; }
+    .navbar .nav-link:hover {
+      color: #35b5ff; }
+
+.nav-item:nth-child(1) {
+  transition-delay: 0.1s; }
+
+.nav-item:nth-child(2) {
+  transition-delay: 0.2s; }
+
+.nav-item:nth-child(3) {
+  transition-delay: 0.3s; }
+
+.nav-item:nth-child(4) {
+  transition-delay: 0.4s; }
+
+.aboutMe {
+  background: linear-gradient(to top, white, gray);
+  height: calc(100vh - 60px);
+  width: 100%;
+  overflow: hidden; }
+  .aboutMe#bg-img {
+    background: url(./image/portfolioWallpaper.jpg);
+    background-attachment: fixed;
+    background-size: cover; }
+    .aboutMe#bg-img:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: rgba(0, 0, 0, 0.635); }
+  .aboutMe a {
+    text-decoration: none;
+    background-color: rgba(247, 243, 243, 0.82);
+    color: #35b5ff;
+    padding: 10px 25px;
+    font-weight: 600;
+    border: 1.8px solid #35b5ff; }
+  .aboutMe a:hover {
+    background-color: #35b5ff;
+    color: rgba(247, 243, 243, 0.82); }
+  .aboutMe .col-left {
+    width: 40%;
+    float: left; }
+    .aboutMe .col-left img {
+      height: 100vh;
+      width: 100%; }
+  .aboutMe .col-right {
+    padding-right: 5%;
+    padding-left: 5%;
+    padding-top: 5%;
+    width: 60%;
+    float: right; }
+    .aboutMe .col-right h1,
+    .aboutMe .col-right p {
+      color: black; }
+    .aboutMe .col-right h1 {
+      font-size: 3em; }
+    .aboutMe .col-right p {
+      font-size: 1em; }
+
+#main .work-container {
+  text-align: center;
+  width: 100%;
+  min-height: 50px;
+  margin: 50px auto 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap; }
+  #main .work-container .box {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin: 10px;
+    box-sizing: border-box;
+    display: inline-block;
+    z-index: 1; }
+    #main .work-container .box .details {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      bottom: 0px;
+      right: 0px;
+      background: rgba(0, 0, 0, 0.8);
+      opacity: 0;
+      transition: 0.5s; }
+      #main .work-container .box .details.show {
+        opacity: 1; }
+      #main .work-container .box .details .content {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: center;
+        padding: 15px;
+        color: #fff;
+        max-height: 400px;
+        overflow: auto; }
+        #main .work-container .box .details .content h2 {
+          margin: 0;
+          padding: 0;
+          font-size: 20px;
+          color: #ff0; }
+        #main .work-container .box .details .content li {
+          margin: 13px 0 0;
+          padding: 0; }
+        #main .work-container .box .details .content a {
+          text-decoration: underline;
+          color: #35b5ff; }
+    #main .work-container .box:hover .imgBox img {
+      transform: scale(1.15); }
+    #main .work-container .box .imgBox {
+      line-height: 0;
+      position: relative;
+      height: 100%;
+      overflow: hidden; }
+      #main .work-container .box .imgBox .wide-img {
+        width: 100%;
+        height: 50%;
+        transition: transform 2s;
+        image-rendering: auto;
+        z-index: 2; }
+      #main .work-container .box .imgBox .full-img {
+        width: 100%;
+        height: 100%;
+        transition: transform 2s;
+        image-rendering: auto;
+        z-index: 2; }
+
+@media screen and (max-width: 768px) {
+  .aboutMe {
+    float: none;
+    width: 100%;
+    min-height: 0;
+    max-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden; }
+    .aboutMe .col-left {
+      height: 40vh; }
+      .aboutMe .col-left img {
+        height: 100%;
+        width: 100vw; }
+    .aboutMe .col-right {
+      height: 60vh;
+      width: 100%; }
+      .aboutMe .col-right h1 {
+        font-size: 30px; }
+      .aboutMe .col-right p {
+        font-size: 16px; }
+  #main {
+    align-items: center;
+    text-align: center; }
+    #main .main-heading {
+      line-height: 1;
+      margin-bottom: 1rem; }
+  ul.navbar-nav,
+  div.navbar-profile {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    ul.navbar-nav.true,
+    div.navbar-profile.true {
+      transform: translate3d(0, 0, 0); }
+  .navbar-nav {
+    height: 75vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 26px;
+    background: #323232; }
+  .navbar-profile {
+    height: 25vh;
+    transform: translate3d(100%, 0, 0);
+    background: #444; }
+    .navbar-profile .portrait {
+      background: url(./image/kevin.jpg);
+      width: 150px;
+      height: 150px;
+      background-size: cover; } }
+
+@media screen and (max-width: 500px) {
+  .aboutMe {
+    width: 100%;
+    min-height: 0;
+    max-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden; }
+    .aboutMe .col-left {
+      float: none; }
+    .aboutMe .col-right {
+      float: none; }
+  #main #home h1 {
+    margin-top: 10vh;
+    font-size: 4em; } }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  color: #fff;
+  height: 100%;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  line-height: 1.5;
+  transition: all 0.4s ease-out; }
+  body#bg-img {
+    background: url(./image/portfolioWallpaper.jpg);
+    background-attachment: fixed;
+    background-size: cover; }
+    body#bg-img:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: rgba(0, 0, 0, 0.635); }
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400; }
+  h1.main-heading,
+  h2.main-heading,
+  h3.main-heading {
+    font-size: 8.1rem; }
+  h1.sub-heading,
+  h2.sub-heading,
+  h3.sub-heading {
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem; }
+
+a {
+  color: #fff;
+  text-decoration: none; }
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%; }
+
+#main {
+  padding: 4rem;
+  height: calc(100vh - 60px);
+  overflow: auto; }
+  #main .icons {
+    margin-top: 1rem; }
+    #main .icons a {
+      padding: 0.4rem; }
+      #main .icons a:hover {
+        color: #35b5ff;
+        transition: all 0.4s ease-out; }
+  #main #home {
+    position: relative;
+    width: 100%;
+    text-align: center; }
+    #main #home .heading-container h1 {
+      font-weight: 400;
+      background-color: white;
+      background-size: cover;
+      background-clip: text;
+      -webkit-backface-clip: text;
+      color: transparent;
+      margin-top: 20vh; }
+
+#main-footer {
+  height: 60px;
+  text-align: center;
+  padding: 1rem;
+  color: #fff;
+  background: #414141; }

@@ -1,0 +1,125 @@
+// Menu Button
+
+.btn-container {
+  position: absolute;
+  z-index: 3;
+  right: 35px;
+  top: 35px;
+  cursor: pointer;
+  @include easeOut;
+
+  .btn-bars {
+    width: 28px;
+    margin: 0 0 5px 0;
+    color: set-text-color($primary-color);
+    @include easeOut;
+  }
+
+  //rotate into X with menu lines
+
+  .true {
+    transform: rotate(180deg);
+  }
+}
+
+//menu overlay
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 0.97;
+  visibility: hidden;
+
+  &.true {
+    visibility: visible;
+  }
+
+  &-profile,
+  &-nav {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  &-nav {
+    margin: 0;
+    padding: 0;
+    float: left;
+    list-style: none;
+    //background: darken($primary-color, 5);
+    background: $primary-color;
+    opacity: 1;
+    //part of sass
+    transform: translate3d(0, -100%, 0);
+    @include easeOut();
+
+    &.true {
+      //slide in from top
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  // profile side
+  &-profile {
+    background: darken($primary-color, 8);
+
+    transform: translate3d(0, 100%, 0);
+
+    @include easeOut();
+
+    &.true {
+      transform: translate3d(0, 0, 0);
+    }
+
+    .portrait {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      border: solid 1px $secondary-color;
+      background: $profile-picture;
+
+      background-size: cover;
+    }
+  }
+  .nav-item {
+    transform: translate3d(600px, 0, 0);
+    @include easeOut();
+
+    &.true {
+      transform: translate3d(0, 0, 0);
+    }
+
+    a.active {
+      color: $secondary-color;
+    }
+  }
+
+  .nav-link {
+    display: inline-block;
+    position: relative;
+    font-size: 30px;
+    text-transform: uppercase;
+    padding: 1rem 0;
+    font-weight: set-text-color($primary-color);
+    text-decoration: none;
+    @include easeOut();
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+}
+
+// Delay each nav item slide by 0.1 s
+
+@for $x from 1 through 4 {
+  .nav-item:nth-child(#{$x}) {
+    transition-delay: $x * 0.1s;
+  }
+}

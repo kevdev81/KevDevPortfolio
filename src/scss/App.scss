@@ -1,0 +1,97 @@
+@import "config";
+@import "menu";
+@import "about";
+@import "mywork";
+@import "mobile";
+
+@import url(https://fonts.googleapis.com/css?family=Nanum+Gothic|PT+Sans+Narrow|Raleway&display=swap);
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  @include background;
+  color: set-text-color($primary-color);
+  height: 100%;
+  margin: 0;
+
+  font-family: "Raleway", sans-serif;
+
+  line-height: 1.5;
+
+  @include easeOut();
+}
+
+//heading
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400;
+
+  &.main-heading {
+    font-size: 8.1rem;
+  }
+
+  &.sub-heading {
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+  }
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}
+
+#main {
+  padding: 4rem;
+  height: calc(100vh - 60px);
+  overflow: auto;
+
+  .icons {
+    margin-top: 1rem;
+
+    a {
+      padding: 0.4rem;
+
+      &:hover {
+        color: $secondary-color;
+        @include easeOut();
+      }
+    }
+  }
+
+  #home {
+    position: relative;
+    width: 100%;
+    text-align: center;
+
+    .heading-container {
+      h1 {
+        font-weight: 400;
+        background-color: white;
+        background-size: cover;
+        background-clip: text;
+        -webkit-backface-clip: text;
+        color: transparent;
+        margin-top: 20vh;
+      }
+    }
+  }
+}
+
+#main-footer {
+  height: 60px;
+  text-align: center;
+  padding: 1rem;
+  color: set-text-color($primary-color);
+  background: darken($primary-color, 1);
+}

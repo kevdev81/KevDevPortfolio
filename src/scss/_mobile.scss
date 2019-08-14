@@ -1,0 +1,98 @@
+//wide screen
+
+@include mediaXlarge {
+}
+
+@include mediaLarge {
+}
+
+@include mediaMedium {
+  //about me
+  .aboutMe {
+    float: none;
+    width: 100%;
+    min-height: 0;
+    max-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    .col-left {
+      height: 40vh;
+      img {
+        height: 100%;
+        width: 100vw;
+      }
+    }
+    .col-right {
+      height: 60vh;
+      width: 100%;
+      h1 {
+        font-size: 30px;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+
+  //navbar
+  #main {
+    align-items: center;
+    text-align: center;
+
+    .main-heading {
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+  }
+  ul.navbar-nav,
+  div.navbar-profile {
+    float: none;
+    width: 100%;
+    min-height: 0;
+
+    &.true {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  .navbar-nav {
+    height: 75vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 26px;
+    background: darken($primary-color, 7);
+  }
+
+  .navbar-profile {
+    height: 25vh;
+    transform: translate3d(100%, 0, 0);
+    background: $primary-color;
+
+    .portrait {
+      background: $profile-picture;
+      width: 150px;
+      height: 150px;
+      background-size: cover;
+    }
+  }
+}
+
+@include mediaSmall {
+  .aboutMe {
+    width: 100%;
+    min-height: 0;
+    max-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    .col-left {
+      float: none;
+    }
+    .col-right {
+      float: none;
+    }
+  }
+  #main #home h1 {
+    margin-top: 10vh;
+    font-size: 4em;
+  }
+}
