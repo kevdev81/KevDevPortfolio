@@ -9,15 +9,6 @@ import workout from "../image/WorkoutUser.PNG";
 import workout2 from "../image/WorkoutTable.PNG";
 import crypto from "../image/CryptoLeft.PNG";
 import crypto2 from "../image/CoinMarketCap.PNG";
-// import crypto2 from "../image/OutlayrRatingWide.png";
-// import joesdough1 from "../image/JoesDough1.png";
-// import joesdough2 from "../image/JoesDough2.png";
-// import joesdough3 from "../image/JoesDough2Full.png";
-// import joesdough4 from "../image/JoesDough3Full.png";
-// import personal1 from "../image/personalFull.jpg";
-// import personal2 from "../image/personal_project2.png";
-// import personal3 from "../image/personal_project3.png";
-// import personal4 from "../image/personalFull1.jpg";
 
 class MyWork extends React.Component {
   componentDidMount() {
@@ -43,8 +34,8 @@ class MyWork extends React.Component {
         <div className="work-container" id="work">
           <div className="box" onClick={this.handleClick}>
             <div className="imgBox">
-              <img className="wide-img" src={address} alt="message-board" />
-              <img className="wide-img" src={address2} alt="chat=preview" />
+              <img className="wide-img" src={address} alt="" />
+              <img className="wide-img" src={address2} alt="" />
             </div>
             <div className="details">
               <div className="content">
@@ -76,8 +67,8 @@ class MyWork extends React.Component {
 
           <div className="box">
             <div className="imgBox">
-              <img className="wide-img" src={campaigns} alt="comments" />
-              <img className="wide-img" src={campaigns2} alt="comments" />
+              <img className="wide-img" src={campaigns} alt="" />
+              <img className="wide-img" src={campaigns2} alt="" />
             </div>
             <div className="details">
               <div className="content">
@@ -102,8 +93,8 @@ class MyWork extends React.Component {
 
           <div className="box">
             <div className="imgBox">
-              <img className="wide-img" src={login} alt="comments" />
-              <img className="wide-img" src={register} alt="comments" />
+              <img className="wide-img" src={login} alt="" />
+              <img className="wide-img" src={register} alt="" />
             </div>
             <div className="details">
               <div className="content">
@@ -133,8 +124,8 @@ class MyWork extends React.Component {
 
           <div className="box">
             <div className="imgBox">
-              <img className="wide-img" src={workout} alt="topping-page" />
-              <img className="wide-img" src={workout2} alt="pizza-page" />
+              <img className="wide-img" src={workout} alt="" />
+              <img className="wide-img" src={workout2} alt="" />
             </div>
             <div className="details">
               <div className="content">
@@ -173,7 +164,7 @@ class MyWork extends React.Component {
           </div>
           <div className="box">
             <div className="imgBox">
-              <img className="full-img" src={crypto} alt="topping-page" />
+              <img className="full-img" src={crypto} alt="" />
             </div>
             <div className="details">
               <div className="content">
@@ -207,7 +198,7 @@ class MyWork extends React.Component {
           </div>
           <div className="box">
             <div className="imgBox">
-              <img className="full-img" src={crypto2} alt="topping-page" />
+              <img className="full-img" src={crypto2} alt="" />
             </div>
             <div className="details">
               <div className="content">
