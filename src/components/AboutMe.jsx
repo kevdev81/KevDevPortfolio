@@ -22,7 +22,7 @@ class AboutMe extends React.Component {
           </p>
           <iframe
             title="linkedinResume"
-            src="//www.slideshare.net/slideshow/embed_code/key/y1gi8Xu87eq4UT"
+            src="//www.slideshare.net/slideshow/embed_code/key/ske4TGBZ8FfUBR"
             width="668"
             height="714"
             frameborder="0"
