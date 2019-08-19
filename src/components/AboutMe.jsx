@@ -21,21 +21,14 @@ class AboutMe extends React.Component {
             surroundings and strive to expand my skillset with new technologies.
           </p>
           <iframe
-            title="linkedinResume"
             src="//www.slideshare.net/slideshow/embed_code/key/ske4TGBZ8FfUBR"
             width="668"
             height="714"
             frameborder="0"
             marginwidth="0"
             marginheight="0"
-            scrolling="yes"
-            style={{
-              border: "1px solid #CCC",
-              borderWidth: "1px",
-              marginBottom: "5px",
-              maxWidth: "100%",
-              overflow: "hidden"
-            }}
+            scrolling="no"
+            style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;"
             allowfullscreen
           />
           <div style={{ marginBottom: "5px" }}>
