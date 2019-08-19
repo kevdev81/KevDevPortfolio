@@ -34,7 +34,7 @@ class AboutMe extends React.Component {
           <div style={{ marginBottom: "5px" }}>
             <a
               style={{ cursor: "pointer !important" }}
-              href="https://www.dropbox.com/s/vxnd2eumt8p2v58/Kevin_Kim%27s_Resume.pdf?dl=0"
+              href="https://www.dropbox.com/s/61xx2etqrgrgzo9/Kevin%27s%20Resume.pdf?dl=0"
               title="Kevin_Kim&#x27;s_Resume"
               target="_blank"
               rel="noopener noreferrer"
